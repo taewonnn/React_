@@ -126,7 +126,7 @@ function Todos() {
   if (status === "error") {
     return <span>Error: {error.message}</span>;
   }
-
+  
   return (
     <ul>
       {data.map(todo => (
