@@ -10,8 +10,22 @@ const ref = useRef("hi")     // {current: "hi"}
 const ref = useRef("hello")     // {current: "hello"}
 const ref = useRef("daram")     // {current: "daram")"}
 ```
-useRef Hook 은 DOM 을 선택하는 용도 외에도, 다른 용도가 한가지 더 있다. 
-컴포넌트 안에서 조회 및 수정 할 수 있는 변수를 관리하는 것 입니다.
+
+
+## 언제??
+1. state와 비슷하게 어떠한 값을 저장해두는 저장공간으로 활용
+  useState -> 렌더링 -> 컴포넌트 내부 변수들이 초기화가 된다!
+  가끔 원하지 않는 렌더링때문에 변수들도 모두 초기화가 됨!!
+
+  => Ref의 변화 -> No 렌더링 -> 변수들의 값이 유지가 된다!
+  => Ref의 변화 -> 렌더링 -> 그래도 변수들의 값이 유지가 된다!  
+
+  => 변경 시 렌더링을 발생시키지 말아야 할 때 유용
+
+
+2. Ref를 통해 DOM요소에 접근 할 때 사용
+  ex. focus 사용 등등  document.querySelector()와 비슷함!!
+
 
 
 
