@@ -1,5 +1,15 @@
 # useRef
 
+```jsx
+const ref = useRef(value);
+
+  // 아래 객체를 반환해준다!
+  {current: value}
+
+const ref = useRef("hi")     // {current: "hi"}
+const ref = useRef("hello")     // {current: "hello"}
+const ref = useRef("daram")     // {current: "daram")"}
+```
 useRef Hook 은 DOM 을 선택하는 용도 외에도, 다른 용도가 한가지 더 있다. 
 컴포넌트 안에서 조회 및 수정 할 수 있는 변수를 관리하는 것 입니다.
 
