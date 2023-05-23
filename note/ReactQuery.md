@@ -48,7 +48,7 @@ npm install react-query
 
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import AppUseRef from "./AppUseRef";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
@@ -58,7 +58,7 @@ ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={true} />
-      <App />
+      <AppUseRef />
     </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")

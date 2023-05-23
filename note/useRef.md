@@ -35,19 +35,19 @@ setTimeout, setInterval 을 통해서 만들어진 id
 외부 라이브러리를 사용하여 생성된 인스턴스
 scroll 위치
 
-App 컴포넌트에서 useRef 를 사용하여 변수를 관리해볼건데요, 
+AppUseRef 컴포넌트에서 useRef 를 사용하여 변수를 관리해볼건데요, 
 용도는 우리가 앞으로 배열에 새 항목을 추가할건데, 새 항목에서 사용 할 고유 id 를 관리하는 용도입니다.
 
 useRef 를 사용하여 변수를 관리하기 전에 해야 할 작업이 있습니다.
 
-지금은 우리가 UserList 컴포넌트 내부에서 배열을 직접 선언해서 사용을 하고 있는데요, 이렇게 UserList 에서 선언해서 사용하는 대신에, 이 배열을 App 에서 선언하고 UserList 에게 props 로 전달을 해주겠습니다.
+지금은 우리가 UserList 컴포넌트 내부에서 배열을 직접 선언해서 사용을 하고 있는데요, 이렇게 UserList 에서 선언해서 사용하는 대신에, 이 배열을 AppUseRef 에서 선언하고 UserList 에게 props 로 전달을 해주겠습니다.
 
-```App.js
+```AppUseRef.js
 import React from 'react';
 
 import UserList from './UserList';
 
-function App() {
+function AppUseRef() {
 const users = [
 {
 id: 1,
@@ -68,7 +68,7 @@ email: 'liz@example.com'
 return <UserList users={users} />;
 }
 
-export default App;
+export default AppUseRef;
 UserList.js
 import React from 'react';
 
@@ -91,13 +91,13 @@ return (
 }
 export default UserList;
 ```
-이제 App 에서 useRef() 를 사용하여 nextId 라는 변수를 만들어보겠습니다.
+이제 AppUseRef 에서 useRef() 를 사용하여 nextId 라는 변수를 만들어보겠습니다.
 
-```App.js
+```AppUseRef.js
 import React, { useRef } from 'react';
 import UserList from './UserList';
 
-function App() {
+function AppUseRef() {
 const users = [
 {
 id: 1,
@@ -126,7 +126,7 @@ const onCreate = () => {
 return <UserList users={users} />;
 }
 
-export default App;
+export default AppUseRef;
 ```
 
 
